@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ttd-ul-yLy">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--IBM MobileFirst Application-->
+        <scene sceneID="6pj-eV-MQp">
+            <objects>
+                <viewController id="ttd-ul-yLy" customClass="ViewController" customModule="MFPStarterIOSSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4NA-JL-O5k"/>
+                        <viewControllerLayoutGuide type="bottom" id="aD0-fU-egt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SCa-Ag-IV0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM0-xF-s1f">
+                                <rect key="frame" x="200" y="451" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.36078431372549019" blue="0.50196078431372548" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="935-r7-3Co"/>
+                                    <constraint firstAttribute="height" constant="50" id="xbG-tO-RYL"/>
+                                </constraints>
+                                <state key="normal" title="Ping MobileFirst Server">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAccessToken:" destination="ttd-ul-yLy" eventType="touchUpInside" id="8GP-xx-5JW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello MobileFirst" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoS-OQ-wiP">
+                                <rect key="frame" x="153" y="98" width="294" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3If-JX-eeh">
+                                <rect key="frame" x="20" y="142" width="560" height="301"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3If-JX-eeh" secondAttribute="trailing" id="1p3-cZ-Y4u"/>
+                            <constraint firstItem="XoS-OQ-wiP" firstAttribute="top" secondItem="4NA-JL-O5k" secondAttribute="bottom" constant="78" id="8eH-lD-xdu"/>
+                            <constraint firstItem="XoS-OQ-wiP" firstAttribute="centerX" secondItem="SCa-Ag-IV0" secondAttribute="centerX" id="MOl-V4-e5S"/>
+                            <constraint firstItem="aD0-fU-egt" firstAttribute="top" secondItem="tM0-xF-s1f" secondAttribute="bottom" constant="99" id="Ml1-El-jTd"/>
+                            <constraint firstItem="tM0-xF-s1f" firstAttribute="centerX" secondItem="SCa-Ag-IV0" secondAttribute="centerX" id="Zds-1v-omq"/>
+                            <constraint firstItem="3If-JX-eeh" firstAttribute="top" secondItem="XoS-OQ-wiP" secondAttribute="bottom" constant="8" id="oTA-yL-d5g"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3If-JX-eeh" secondAttribute="leading" id="viG-8i-WQI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="IBM MobileFirst Application" id="7Gt-Wj-1yu"/>
+                    <connections>
+                        <outlet property="connectionStatusLabel" destination="3If-JX-eeh" id="GEg-nv-Kp9"/>
+                        <outlet property="testServerButton" destination="tM0-xF-s1f" id="qou-ps-IoE"/>
+                        <outlet property="titleLabel" destination="XoS-OQ-wiP" id="bI2-4w-L5I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JtQ-0b-E1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="386"/>
+        </scene>
+    </scenes>
+</document>
